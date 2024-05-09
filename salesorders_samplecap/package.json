@@ -6,10 +6,10 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@sap/cds": "^7",
-    "express": "^4",
+    "@sap/cds": "^7.9.0",
+    "@sap/cds-hana": "^2",
     "@sap/xssec": "^3",
-    "@sap/cds-hana": "^2"
+    "express": "^4"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
@@ -21,9 +21,20 @@
     "start": "cds-serve"
   },
   "cds": {
+    "build": {
+      "tasks": [
+        {
+          "for": "hana",
+          "dest": "../db"
+        },
+        {
+          "for": "node-cf"
+        }
+      ]
+    },
     "requires": {
       "auth": "xsuaa",
-      "db": "hana"
+      "db": "hana-cloud"
     }
   }
 }
