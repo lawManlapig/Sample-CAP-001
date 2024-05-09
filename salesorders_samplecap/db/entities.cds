@@ -18,7 +18,7 @@ entity OrderHeaders : managed {
 entity OrderItems {
     key id          : UUID;
     key ordernumber : Association to OrderHeaders;
-    key itemnumber  : Int32;
+    key itemnumber  : String(10);
         material    : String(18);
         batch       : String(10);
         description : String(40);
