@@ -33,7 +33,7 @@
       ]
     },
     "requires": {
-      "auth": "xsuaa",
+      "auth": "mocked",
       "db": "hana-cloud"
     }
   }
