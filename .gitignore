@@ -1,3 +1,5 @@
 
 # auto generated wildcard
 salesorders_samplecap/db/.env
+# added by cds
+.cdsrc-private.json
