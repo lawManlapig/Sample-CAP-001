@@ -1,0 +1,9 @@
+{
+    "actions": [
+        {
+            "id": "openReadmeFile",
+            "actionType": "FILE",
+            "uri": "file:///home/user/projects/salesorders_samplecap/.gen/generation.log"
+        }
+    ]
+}
