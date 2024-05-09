@@ -1,21 +1,43 @@
 {
-  "xsappname": "salesorders_samplecap",
-  "tenant-mode": "dedicated",
-  "description": "Security profile of called application",
   "scopes": [
     {
-      "name": "uaa.user",
-      "description": "UAA"
+      "name": "$XSAPPNAME.salesorderAdmin",
+      "description": "salesorderAdmin"
+    },
+    {
+      "name": "$XSAPPNAME.salesorderRead",
+      "description": "salesorderRead"
+    },
+    {
+      "name": "$XSAPPNAME.salesorderUser",
+      "description": "salesorderUser"
     }
   ],
+  "attributes": [],
   "role-templates": [
     {
-      "name": "Token_Exchange",
-      "description": "UAA",
+      "name": "salesorderAdmin",
+      "description": "generated",
       "scope-references": [
-        "uaa.user"
-      ]
+        "$XSAPPNAME.salesorderAdmin"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "salesorderRead",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.salesorderRead"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "salesorderUser",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.salesorderUser"
+      ],
+      "attribute-references": []
     }
-  ],
-  "attributes": []
+  ]
 }
